@@ -1,10 +1,12 @@
-<div>
-  <h1>Hello {{ userName }} from BridgeLabz</h1> <!-- ✅ Removed 'this' -->
+<div class="container">
+  <h1>Hello {{ userName }} from BridgeLabz</h1>
   <img [src]="imgUrl" (click)="onClick($event)"
    alt="The BridgeLabz logo: a Bridge to Employment through a Lab Works." style="cursor: pointer;">
 </div>
-<div>
-  <input [(ngModel)]="userName"/>
+
+<div class="input-container">
+  <input [(ngModel)]="userName" (ngModelChange)="onInput()" />
+  <span class="error-output">{{ nameError }}</span>
 </div>
 
 <router-outlet></router-outlet>

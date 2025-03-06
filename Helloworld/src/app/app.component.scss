@@ -1,15 +1,30 @@
 h1 {
-    color: rgb(129, 129, 238);
-    text-align: center;
-  }
-  
+  color: rgb(129, 129, 238);
+  text-align: center;
+}
+
 img {
-    display: block;
-    margin: 0 auto;
-    width: 25%;
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+}
+
+.input-container {
+  display: flex;
+  align-items: center; /* Align input and error message in a row */
+  justify-content: center; /* ✅ Center the whole input+error horizontally */
+  gap: 10px; /* Adds space between input and error message */
 }
 
 input {
-  display: block;
-  margin: 0 auto;
+  padding: 4px; /* ✅ Adds some spacing inside the input */
+  font-size: 12px;
+}
+
+.error-output {
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+  white-space: nowrap; /* Prevents error text from wrapping */
+  font-style: italic
 }
